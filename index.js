@@ -39,6 +39,11 @@ container.addEventListener('click',  (event)=>{
       }, 500);
 })
 
+videoSrc.addEventListener("canplay", ()=> {
+    setTimeout(()=> {
+        videoSrc.play();
+    }, 1500);
+});
 pageOne.addEventListener('click',  (event)=>{
 
     let candidat = '';
