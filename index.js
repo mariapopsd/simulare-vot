@@ -15,8 +15,14 @@ container.addEventListener('click',  (event)=>{
     stampPosition.x = event.pageY;
     stampPosition.y = event.pageX;
     stamp.style.display = "block";
-    stamp.style.top = `${stampPosition.x}px`;
-    stamp.style.left = `${stampPosition.y}px`;
+    if(window.innerWidth > 600){
+        stamp.style.top = `${stampPosition.x-40}px`;
+        stamp.style.left = `${stampPosition.y-40}px`;
+    }
+    if(window.innerWidth < 600){
+        stamp.style.top = `${stampPosition.x-20}px`;
+        stamp.style.left = `${stampPosition.y-20}px`;
+    }
     stamp.style.backgroundPosition = 'center';
     stamp.style.backgroundRepeat = 'no-repeat';
 
