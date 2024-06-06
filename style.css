@@ -82,6 +82,7 @@ body {
 
   #video-src{
     height: 400px;
+    width: 100%;
     overflow: hidden;
   }
   #try-again, #results, #back-btn{
