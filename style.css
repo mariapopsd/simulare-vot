@@ -80,6 +80,10 @@ body {
     padding: 25px;
   }
 
+  #video-src{
+    height: 400px;
+    overflow: hidden;
+  }
   #try-again, #results, #back-btn{
     text-decoration: none;
     border-radius: 5px;
