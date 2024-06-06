@@ -111,18 +111,42 @@ pageTwo.addEventListener('click',  (event)=>{
 
 
 pageOne.addEventListener('mouseover', (event)=>{
-    let paneOneCols = [];
-    let y = 16;
-    generateList(paneOneCols, document.getElementsByClassName('box-1'), y )
+    let pageOneCols = [];
+    if(window.innerWidth > 600){
+        let y = 16;
+        let lx = 28;
+        let rx = 330;
+        let increment = 230;
+        generateList(pageOneCols, document.getElementsByClassName('box-1'), y, lx, rx, increment );
+    }
+    if(window.innerWidth < 600){
+        let y = 22;
+        let lx = 9;
+        let rx = 160;
+        let increment = 120;
+        generateList(pageOneCols, document.getElementsByClassName('box-1'), y, lx, rx, increment );
+    }
 })
 
 pageTwo.addEventListener('mouseover', (event)=>{
     let pageTwoCols = [];
-    let y = 16;
-    generateList(pageTwoCols, document.getElementsByClassName('box-2'), y )
+    if(window.innerWidth > 600){
+        let y = 16;
+        let lx = 28;
+        let rx = 330;
+        let increment = 230;
+        generateList(pageTwoCols, document.getElementsByClassName('box-2'), y, lx, rx, increment );
+    }
+    if(window.innerWidth < 600){
+        let y = 22;
+        let lx = 9;
+        let rx = 160;
+        let increment = 120;
+        generateList(pageTwoCols, document.getElementsByClassName('box-2'), y, lx, rx, increment );
+    }
 })
 
-function generateList(cols, src, y){
+function generateList(cols, src, y, lx, rx, increment){
     for(let i = 0; i < src.length; i++){
         let element = src[i];
         if(!cols.find(el => el === element)){
@@ -131,14 +155,14 @@ function generateList(cols, src, y){
     }
     cols.forEach((element, index) => {
         if(index % 2 === 0){
-            element.style.left = '28px';
+            element.style.left = `${lx}px`;
             element.style.top = `${y}px`;
         } else {
-            element.style.left = '330px';
+            element.style.left = `${rx}px`;
             element.style.top = `${y}px`;
         }
         if(index % 2 !== 0){
-            y += 230;
+            y += increment;
         }
     })
 }
