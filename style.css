@@ -6,6 +6,11 @@ body {
 
   h1{
     margin-bottom: 0px;
+    text-align: center;
+  }
+  
+h2, h3{
+    text-align: center;
   }
 
 .container{
