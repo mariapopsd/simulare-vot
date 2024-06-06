@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: url('resources/stamp-90.png'), auto;
+    cursor: url('resources/stamp-90.png') 40 40, auto;
 }
 
   #stamp {
@@ -132,6 +132,8 @@ body {
   @media only screen and (max-width: 600px) {
     .container{
         width: 100%;
+        cursor: url('resources/stamp-80.png') 40 40, auto;
+
     }
 
     #cover, #page-1, #page-2{
@@ -155,4 +157,10 @@ body {
     #modal .modal-container{
         width: 90%;
       }
+      
+    #stamp {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    }
   }
